@@ -1,0 +1,95 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+
+//#import < BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "ChatDemoUIDefine.h"
+#import "EMAlertView.h"
+#import "TTGlobalUICommon.h"
+//    #import "UIViewController+HUD.h"
+#import "UIViewController+DismissKeyboard.h"
+#import "NSString+Valid.h"
+
+#import "EMSDK.h"
+#if DEMO_CALL == 1
+#import "EMClient+Call.h"
+#endif
+#import "EaseUI.h"
+
+#define DEMO_CALL 0
+#define NSEaseLocalizedString(key, comment) [[NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"EaseUIResource" withExtension:@"bundle"]] localizedStringForKey:(key) value:@"" table:nil]
+#import "UIView+Frame.h"
+#import "LFNavigationController.h"
+#import "LFTabBarViewController.h"
+#import "HomeViewController.h"
+#import "CatoryViewController.h"
+#import "BugCarViewController.h"
+#import "ProfleViewController.h"
+#import "DCPicScrollView.h"
+#import "Masonry.h"
+#import "LFTabBar.h"
+#import "RushedPurViewController.h"
+#import "MessageViewController.h"
+#import "UIImage+Extension.h"
+#import "LFPopView.h"
+#import "AddressBookViewController.h"
+#import "GroupChatViewController.h"
+#import "ScanViewController.h"
+#import "QRCodeViewController.h"
+#import "ContractListViewController.h"
+#import "ContractModel.h"
+#import "MenuTableViewController.h"
+#import "User.h"
+#import "QRCodeView.h"
+//#import "UIImageView+WebCache.h"
+#import "FriendsTrendsViewController.h"
+#import "ChangePhotoViewController.h"
+#import "FriendSTrends.h"
+#import "Photo.h"
+#import "FriendTrendsFrame.h"
+#import "ShareView.h"
+#import "PhotosView.h"
+#import "CommentView.h"
+#import "MJExtension.h"
+#import "LFImagePickerController.h"
+#import "PersonTrendViewController.h"
+
+
+#define  LFLightGrayColor [UIColor colorWithRed:0.9569 green:0.9569 blue:0.9569 alpha:1.0]
+#define  LFLightBlueColor [UIColor colorWithRed:89.0/255.0 green:145.0/255.0 blue:255.0/255.0 alpha:1.0]
+#ifdef DEBUG    //如果在模拟器上运行
+#define LFLOG(...)  NSLog(__VA_ARGS__)
+#else
+#define LFLOG(...)
+#endif
+
+#endif
